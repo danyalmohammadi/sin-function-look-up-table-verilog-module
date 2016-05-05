@@ -12,9 +12,9 @@ clear all
 clc
 
 %%
-x = 0:.5:60;
-num_deg = 1:121;
-res =16;                        %resolution
+x = 0:.5:60;                    % Look-up table for every 0.5 degree
+num_deg = 1:1:length(x);
+res =16;                        % fixed-point resolution Q16_16
 
 %%
 for i= 1:length(num_deg)-1
@@ -45,8 +45,7 @@ fprintf(fileID,' input             [%1d:0]     angle_value; \n\n\n\n\n',6);
 fprintf(fileID,'always @(posedge CLK)\n');
 fprintf(fileID,' if (enable) \n');
 fprintf(fileID,'   case ( angle_value) \n');
-             %                                        'res' value is 5 % only thing that
-             %                                        needs to be changed is 'res'
+             
 fprintf(fileID,'     7''d%3d : begin sin_value <= 16''b%16.0f;    sin_pi3_value <= 16''b%16.0f;    end \n', A);
 fprintf(fileID,'   endcase\n');
 fprintf(fileID,'endmodule\n');
