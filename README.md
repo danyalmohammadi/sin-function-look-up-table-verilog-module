@@ -4,3 +4,5 @@ This Matlab function creates an Verilog look-up table module of a sin(theta) fun
 Inputs are clock, reset, enable signal and angle value. The resolution is set to be every 0.5 degree and it can be changed. Therefore, there will be 120 angle value for 60 degree. 
 
 Outputs are sin(theta) and sin(pi/3-theta).
+
+sinLUT.m calls another function for bianry conversion called dec2binfrac.m .
