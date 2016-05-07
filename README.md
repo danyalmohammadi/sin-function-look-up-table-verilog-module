@@ -6,3 +6,5 @@ Inputs are clock, reset, enable signal and angle value. The resolution is set to
 Outputs are sin(theta) and sin(pi/3-theta).
 
 sinLUT.m calls another function for bianry conversion called dec2binfrac.m .
+
+https://danyalmohammadiblog.wordpress.com/tutorials/
